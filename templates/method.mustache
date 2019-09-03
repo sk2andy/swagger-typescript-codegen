@@ -67,7 +67,7 @@
 {{&methodName}}(parameters: {
 {{#parameters}}{{^isSingleton}}'{{&camelCaseName}}'{{&cardinality}}: {{> type}},
 {{/isSingleton}}{{/parameters}}
-} & CommonRequestOptions): Promise<{{&responseTypes}}> {
+} & CommonRequestOptions, requestHeaders: RequestHeaders): Promise<{{&responseTypes}}> {
     const domain = parameters.$domain ? parameters.$domain : this.domain;
     let path = '{{&path}}';
     if (parameters.$path) {
@@ -76,7 +76,7 @@
 
     let body: any;
     let queryParameters: QueryParameters = {};
-    let headers: RequestHeaders = {};
+    let headers: RequestHeaders = requestHeaders || {};
     let form: any = {};
     return new Promise((resolve, reject) => {
 {{#headers}}
