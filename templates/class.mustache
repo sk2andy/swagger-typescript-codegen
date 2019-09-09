@@ -48,7 +48,7 @@ export interface CommonRequestOptions {
  */
 export class {{&className}} {
 
-    private domain: string = "{{&domain}}";
+    private domain: string = process.env.VUE_APP_ENDPOINT;
     private errorHandlers: CallbackHandler[] = [];
     private requestHeadersHandler?: RequestHeadersHandler;
     private configureAgentHandler?: ConfigureAgentHandler;
