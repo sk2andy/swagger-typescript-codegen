@@ -1,17 +1,31 @@
 {
-  "name": "swagger-typescript-codegen",
-  "main": "./lib/codegen.js",
-  "version": "2.0.1",
-  "description": "A Swagger Codegenerator tailored for typescript.",
-  "scripts": {
-    "pretest": "npm run build",
-    "test": "grunt && jest",
-    "clean": "rm -rf tmp-*",
-    "build": "tsc --project tsconfig.json",
-    "build:watch": "npm run build -- --watch",
-    "test:watch": "jest --watch",
-    "prepublishOnly": "npm run build",
-    "prettier": "prettier --write \"src/**/*.ts\""
+  "_from": "swagger-typescript-codegen",
+  "_id": "swagger-typescript-codegen@3.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-mg+5iB9ieM/WQGjjFRLhHxiRUNR427IUzsTnC5GsK5mBV3D4nwAO5EkhK11a75pVTPBtuGRlGViSoUIsmpUKxA==",
+  "_location": "/swagger-typescript-codegen",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "swagger-typescript-codegen",
+    "name": "swagger-typescript-codegen",
+    "escapedName": "swagger-typescript-codegen",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/swagger-typescript-codegen/-/swagger-typescript-codegen-3.0.1.tgz",
+  "_shasum": "0991b99acdf87764d178b41b946f0520a9ba1433",
+  "_spec": "swagger-typescript-codegen",
+  "_where": "/Users/skandy/workspace/we-do-ai/real estate abstract generation/TextGenerationDemo/TextGenerationDemo/ClientApp",
+  "author": {
+    "name": "Marius Tennøe",
+    "email": "mariust@outlook.com"
   },
   "bin": {
     "swagger2ts": "bin/swagger2ts.js"
@@ -19,20 +33,7 @@
   "bugs": {
     "url": "https://github.com/mtennoe/swagger-typescript-codegen/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mtennoe/swagger-typescript-codegen.git"
-  },
-  "keywords": [
-    "swagger",
-    "rest"
-  ],
-  "author": {
-    "name": "Marius Tennøe",
-    "email": "mariust@outlook.com"
-  },
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/mtennoe/swagger-typescript-codegen",
+  "bundleDependencies": false,
   "dependencies": {
     "commander": "^2.19.0",
     "js-beautify": "^1.8.9",
@@ -41,6 +42,8 @@
     "mustache": "^3.0.1",
     "update-notifier": "^2.5.0"
   },
+  "deprecated": false,
+  "description": "A Swagger Codegenerator tailored for typescript.",
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/jest": "^23.3.10",
@@ -64,15 +67,38 @@
     "typescript": "^3.2.2",
     "vows": "^0.8.2"
   },
+  "homepage": "https://github.com/mtennoe/swagger-typescript-codegen",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
+  "keywords": [
+    "swagger",
+    "rest"
+  ],
+  "license": "Apache-2.0",
   "lint-staged": {
     "*.{ts,md},": [
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "main": "./lib/codegen.js",
+  "name": "swagger-typescript-codegen",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mtennoe/swagger-typescript-codegen.git"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "build:watch": "npm run build -- --watch",
+    "clean": "rm -rf tmp-*",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run build",
+    "prettier": "prettier --write \"src/**/*.ts\"",
+    "test": "grunt && jest",
+    "test:watch": "jest --watch"
+  },
+  "version": "3.0.1"
 }
